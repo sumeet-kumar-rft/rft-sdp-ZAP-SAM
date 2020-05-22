@@ -8,7 +8,7 @@
 
       icon: git
       source:
-        uri: https://github.com/rft/rft-SDP-ZAP-SAM-pipeline.git
+        uri:  https://github.com/sumeet-kumar-rft/rft-sdp-ZAP-SAM.git
 
         branch: SAM
 
