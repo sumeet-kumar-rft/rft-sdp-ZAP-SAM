@@ -1,0 +1,5 @@
+  - task: dynamic-security-scan
+    file: pipeline-resource/tasks/dast.yml
+    input_mapping: {source-code: source-code-resource, pipeline: pipeline-resource}
+    params: 
+        DISABLED: true
