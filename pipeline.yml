@@ -1,5 +1,8 @@
-  - task: dynamic-security-scan
-    file: pipeline-resource/tasks/dast.yml
-    input_mapping: {source-code: source-code-resource, pipeline: pipeline-resource}
-    params: 
-        DISABLED: true
+---
+jobs:
+- name: Dynamic secuirty scan
+  plan:
+    - task: dynamic-security-scan
+      file: rft-sdp-ZAP-SAM/tasks/dast.yml
+      input_mapping: {source-code: rft-sdp-ZAP-SAM, pipeline: pipeline-pipeline.yml}
+    
