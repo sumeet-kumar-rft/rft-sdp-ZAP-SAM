@@ -1,8 +1,25 @@
 ---
-jobs:
-- name: Dynamic secuirty scan
-  plan:
+  
+
+  resources:
+    - name: pipeline-git
+
+      type: git
+
+      icon: git
+      source:
+        uri: https://github.com/rft/rft-SDP-ZAP-SAM-pipeline.git
+
+        branch: SAM
+
+        username: ((kv/github.access_token))
+
+        password: x-oauth-basic
+  jobs:
+  - name: Dynamic secuirty scan
+    plan:
+    - get: pipeline-git
     - task: dynamic-security-scan
-      file: rft-sdp-ZAP-SAM/tasks/dast.yml
+      file: pipeline/tasks/dast.yml
       input_mapping: {source-code: rft-sdp-ZAP-SAM, pipeline: pipeline-pipeline.yml}
     
