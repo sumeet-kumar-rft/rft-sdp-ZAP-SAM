@@ -19,7 +19,9 @@
   - name: Dynamic secuirty scan
     plan:
     - get: pipeline-git
+    
+      trigger: true
     - task: dynamic-security-scan
-      file: pipeline/tasks/dast.yml
-      input_mapping: {source-code: rft-sdp-ZAP-SAM, pipeline: pipeline-pipeline.yml}
+      file: pipeline-git/tasks/dast.yml
+      input_mapping: {rft-sdp-ZAP-SAM: pull-request, pipeline: pipeline-pipeline.yml}
     
