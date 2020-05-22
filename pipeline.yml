@@ -1,27 +1,18 @@
 ---
-  
-
   resources:
     - name: pipeline-git
-
       type: git
-
       icon: git
       source:
         uri:  https://github.com/sumeet-kumar-rft/rft-sdp-ZAP-SAM.git
-
         branch: SAM
-
         username: ((kv/github.access_token))
-
         password: x-oauth-basic
   jobs:
-  - name: Dynamic secuirty scan
+  - name: compile
     plan:
     - get: pipeline-git
-    
       trigger: true
     - task: dynamic-security-scan
       file: pipeline-git/tasks/dast.yml
-      input_mapping: {rft-sdp-ZAP-SAM: pull-request, pipeline: pipeline-pipeline.yml}
     
