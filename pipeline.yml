@@ -6,7 +6,7 @@
       source:
         uri:  https://github.com/sumeet-kumar-rft/rft-sdp-ZAP-SAM.git
         branch: SAM
-        username: ((kv/github.access_token))
+        username: ((github_access_token))
         password: x-oauth-basic
   jobs:
   - name: compile
