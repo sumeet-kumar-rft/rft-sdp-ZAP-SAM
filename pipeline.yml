@@ -9,7 +9,7 @@
         username: ((github_access_token))
         password: x-oauth-basic
   jobs:
-  - name: compile
+  - name: ZAP-demo-scan
     plan:
     - get: pipeline-git
       trigger: true
