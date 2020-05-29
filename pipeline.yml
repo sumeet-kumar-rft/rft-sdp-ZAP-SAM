@@ -15,4 +15,3 @@
       trigger: true
     - task: dynamic-security-scan
       file: pipeline-git/tasks/dast2.yml
-    
