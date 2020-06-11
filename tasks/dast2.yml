@@ -15,7 +15,6 @@
                 cd /tmp
                 set -o monitor
                 trap `exit(0)` CHLD
-                /zap/zap-baseline.py -t http://demo.testfire.net 
+                /zap/zap-baseline.py -t http://demo.testfire.net
                 kill `pgrep Xvfb`
                 echo "DAST SCANNING COMPLETE"
-      
