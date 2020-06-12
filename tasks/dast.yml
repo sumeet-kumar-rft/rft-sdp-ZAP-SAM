@@ -6,7 +6,7 @@ image_resource:
 inputs:
 - name: pipeline-git
 - name: target-data
-    args:pipeline-git/tasks/target-data.txt
+    
 
 outputs:
   - name: dast-data
