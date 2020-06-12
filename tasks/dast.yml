@@ -9,11 +9,4 @@ outputs:
   - name: dast-data
   - name: /zap/wrk
 run:
-  path: bash
-  args:
-    - -c
-    - |
-      set -ex
-      mkdir -p /zap/wrk
-      cd /tmp
-      zap-baseline.py -t http://demo.testfire.net
+  path: pipeline/tasks/dast.sh
