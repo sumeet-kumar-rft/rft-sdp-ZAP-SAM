@@ -10,4 +10,6 @@ outputs:
   - name: dast-data
   - name: /zap/wrk
 run:
-  path: pipeline-git/tasks/dast.sh
+  path: bash
+  args:
+  - pipeline-git/tasks/dast.sh
