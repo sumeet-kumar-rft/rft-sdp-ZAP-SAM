@@ -18,3 +18,4 @@
                 /zap/zap-baseline.py -t http://demo.testfire.net
                 kill `pgrep Xvfb`
                 echo "DAST SCANNING COMPLETE"
+                
