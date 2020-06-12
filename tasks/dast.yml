@@ -15,4 +15,4 @@ run:
   path: bash
   args:
   - pipeline-git/tasks/dast.sh
-  - pipeline-git/tasks/target-data.txt
+  - pipeline-git/tasks/target-data/target.txt
