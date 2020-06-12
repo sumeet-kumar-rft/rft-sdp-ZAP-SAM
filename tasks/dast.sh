@@ -6,7 +6,6 @@ fi
 
 echo "Performing DAST scanning"
 echo "Targets:"
-echo "http://demo.testfire.net" > ./target-data/targets
 cat ./target-data/targets
 
 # workaround to fix hanging Zap processes that prevents the container from exiting - https://github.com/concourse/concourse/issues/763
