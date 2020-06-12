@@ -5,6 +5,8 @@ image_resource:
   source: {repository: owasp/zap2docker-stable, tag: latest}
 inputs:
 - name: pipeline-git
+- name: target-data
+    args:pipeline-git/tasks/target-data.txt
 
 outputs:
   - name: dast-data
