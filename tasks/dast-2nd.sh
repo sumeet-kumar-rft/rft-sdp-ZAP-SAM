@@ -16,6 +16,8 @@ do
   echo "SCANNING $host"
     zap-baseline.py -t $host -g gen.conf -r "report.html" -J "report.json" 
   # workaround to fix hanging Zap processes that prevents the container from exiting - https://github.com/concourse/concourse/issues/763
-done  
+done
+do  
   kill $XVFB_PID
   echo "DAST SCANNING COMPLETE"
+ done 
