@@ -3,7 +3,6 @@
 set -e
 set -x
 
-USER root
 mkdir -p tmp
 
 NAME=$(jq -r .name < project-data/project.json)
