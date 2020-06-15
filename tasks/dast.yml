@@ -13,4 +13,4 @@ outputs:
 run:
   path: sh
   args:
-  - pipeline-git/tasks/dast2.sh
+  - pipeline-git/tasks/dast-2nd.sh
