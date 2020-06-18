@@ -19,3 +19,5 @@ do
   kill $XVFB_PID
   echo "DAST SCANNING COMPLETE"
 done
+kill $XVFB_PID
+  echo "DAST SCANNING COMPLETE"
