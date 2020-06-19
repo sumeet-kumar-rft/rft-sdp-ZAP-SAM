@@ -11,13 +11,10 @@ for host in $(cat ./pipeline-git/tasks/target-data/target.txt)
 do
     cd /tmp
   # workaround to fix hanging Zap processes that prevents the container from exiting - https://github.com/concourse/concourse/issues/763
-  Xvfb :1 -screen 0 1024x768x16 -ac &
-  XVFB_PID=$!
+  trap 'exit(0)' CHLD
   echo "SCANNING $host"
     zap-baseline.py -t $host -g gen.conf -r "report.html" -J "report.json" 
   # workaround to fix hanging Zap processes that prevents the container from exiting - https://github.com/concourse/concourse/issues/763
-  kill $XVFB_PID
+  kill `pgrep Xvfb`
   echo "DAST SCANNING COMPLETE"
 done
-kill $XVFB_PID
-  echo "DAST SCANNING COMPLETE"
