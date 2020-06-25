@@ -16,7 +16,8 @@
                 apt-get update && apt-get install -q -y --fix-missing jq
                 pip install --upgrade pip && pip install --upgrade zapcli
                 zap-cli start --start-options '-config api.disablekey=true'
-                zap-cli -v open-url active-scan --scanners all --recursive "http://demo.testfire.net"
+                zap-cli open-url "http://demo.testfire.net"
+                zap-cli -v active-scan --scanners all "http://demo.testfire.net"
                 zap-cli shutdown
 
                 #cd /tmp
