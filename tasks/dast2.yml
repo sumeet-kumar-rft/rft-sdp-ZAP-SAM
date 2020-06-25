@@ -8,14 +8,21 @@
           outputs:
             - name: output
           run:
+            user: root
             path: bash
             args:
               - "-c"
               - |
-                cd /tmp
-                set -o monitor
-                trap `exit(0)` CHLD
-                /zap/zap-baseline.py -t http://demo.testfire.net
-                kill `pgrep Xvfb`
-                echo "DAST SCANNING COMPLETE"
+                apt-get update && apt-get install -q -y --fix-missing jq
+                pip install --upgrade pip && pip install --upgrade zapcli
+                zap-cli start --start-options '-config api.disablekey=true'
+                zap-cli -v quick-scan --spider --ajax-spider --scanners all "http://demo.testfire.net" || true
+                zap-cli shutdown
+
+                #cd /tmp
+                #set -o monitor
+                #trap `exit(0)` CHLD
+                #/zap/zap-baseline.py -t http://demo.testfire.net
+                #kill `pgrep Xvfb`
+                #echo "DAST SCANNING COMPLETE"
                 
