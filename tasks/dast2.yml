@@ -7,6 +7,7 @@
               tag: latest
           inputs:
             - name: pipeline-git
+            # this is new line u have added to fetch from the context file for login and remove line 23 
           outputs:
             - name: output
           run:
@@ -19,7 +20,8 @@
                 apt-get update && apt-get install -q -y --fix-missing jq
                 pip install --upgrade pip && pip install --upgrade zapcli
                 zap-cli start --start-options '-config api.disablekey=true'
-                zap-cli context import DefaultContext2.context
+                zap-cli context export --name DefaultContext2 --file-path pipeline-git/tasks/DefaultContext2.context
+                zap-cli context import pipeline-git/tasks/DefaultContext2.context
                 zap-cli open-url http://demo.testfire.net
                 zap-cli spider http://demo.testfire.net
                 zap-cli -v active-scan --scanners all --recursive http://demo.testfire.net
