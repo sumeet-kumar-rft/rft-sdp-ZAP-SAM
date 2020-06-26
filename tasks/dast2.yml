@@ -23,6 +23,7 @@
                 zap-cli context import /tasks/DefaultContext2.context
                 zap-cli open-url http://demo.testfire.net
                 zap-cli spider http://demo.testfire.net
+                zap-cli ajax-spider http://demo.testfire.net
                 zap-cli -v active-scan --scanners all --recursive http://demo.testfire.net
                 zap-cli alerts
                 zap-cli shutdown
