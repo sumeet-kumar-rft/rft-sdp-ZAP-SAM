@@ -19,8 +19,8 @@
                 apt-get update && apt-get install -q -y --fix-missing jq
                 pip install --upgrade pip && pip install --upgrade zapcli
                 zap-cli start --start-options '-config api.disablekey=true'
-                zap-cli context export --name DefaultContext2 --file-path /tasks/DefaultContext2.context
-                zap-cli context import /tasks/DefaultContext2.context
+                zap-cli context export --name DefaultContext2 --file-path ./pipeline-git/tasks/DefaultContext2.context
+                zap-cli context import ./pipeline-git/tasks/DefaultContext2.context
                 zap-cli open-url http://demo.testfire.net
                 zap-cli spider http://demo.testfire.net
                 zap-cli ajax-spider http://demo.testfire.net
