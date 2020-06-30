@@ -16,9 +16,9 @@
             args:
               - "-c"
               - |
-                ls -al
+                #ls -al
                 pwd
-                ls -al pipeline-git/tasks/
+                #ls -al pipeline-git/tasks/
                 apt-get update && apt-get install -q -y --fix-missing jq
                 pip install --upgrade pip && pip install --upgrade zapcli
                 zap-cli start --start-options '-config api.disablekey=true'
