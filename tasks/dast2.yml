@@ -11,7 +11,7 @@
           outputs:
             - name: output
           run:
-            user: sudo
+            user: root
             path: bash
             args:
               - "-c"
