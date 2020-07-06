@@ -11,11 +11,12 @@
           outputs:
             - name: output
           run:
-            user: root
+            user: sudo
             path: bash
             args:
               - "-c"
               - |
+                set -euo pipefail
                 #ls -al
                 pwd
                 #ls -al pipeline-git/tasks/
