@@ -1,19 +1,88 @@
-[
-    {
-      "name": "zap",
-      "context": "ZAP BodgeIt Scan",
-      "target": {
-        "name": "demo",
-        "location": "http://demo.testfire.net/",
-        "attributes": 
-        {
-            "type": "2",
-            "form": {
-               "loginurl": "http://demo.testfire.net/doLogin",
-               "loginbody": "uid={%username%}&passw=admin&btnSubmit=Login",
-               "loginpageurl": "http://demo.testfire.net/doLogin"
-            }
-        }
+{
+    "context": {
+       "name": "Default Context",
+       "desc": [],
+       "inscope": "true",
+       "incregexes": [
+          "http://demo.testfire.net/login.jsp.*",
+          "http://demo.testfire.net.*"
+       ],
+       "tech": [
+          "Db",
+          "Db.CouchDB",
+          "Db.Firebird",
+          "Db.HypersonicSQL",
+          "Db.IBM DB2",
+          "Db.Microsoft Access",
+          "Db.Microsoft SQL Server",
+          "Db.MongoDB",
+          "Db.MySQL",
+          "Db.Oracle",
+          "Db.PostgreSQL",
+          "Db.SAP MaxDB",
+          "Db.SQLite",
+          "Db.Sybase",
+          "Language",
+          "Language.ASP",
+          "Language.C",
+          "Language.JSP/Servlet",
+          "Language.Java",
+          "Language.JavaScript",
+          "Language.PHP",
+          "Language.Python",
+          "Language.Ruby",
+          "Language.XML",
+          "OS",
+          "OS.Linux",
+          "OS.MacOS",
+          "OS.Windows",
+          "SCM",
+          "SCM.Git",
+          "SCM.SVN",
+          "WS",
+          "WS.Apache",
+          "WS.IIS",
+          "WS.Tomcat"
+       ],
+       "urlparser": {
+          "class": "org.zaproxy.zap.model.StandardParameterParser",
+          "config": {
+             "kvps": "&",
+             "kvs": "=",
+             "struct": []
+          }
+       },
+       "postparser": {
+          "class": "org.zaproxy.zap.model.StandardParameterParser",
+          "config": {
+             "kvps": "&",
+             "kvs": "=",
+             "struct": []
+          }
+       },
+       "authentication": {
+          "type": "2",
+          "form": {
+             "loginurl": "http://demo.testfire.net/doLogin",
+             "loginbody": "uid={%username%}&passw=admin&btnSubmit=Login",
+             "loginpageurl": "http://demo.testfire.net/doLogin"
+          }
+       },
+       "users": {
+          "user": "97;false;YWRtaW4=;2;YWRtaW4=~YWRtaW4=~"
+       },
+       "forceduser": "-1",
+       "session": {
+          "type": "0"
+       },
+       "authorization": {
+          "type": "0",
+          "basic": {
+             "header": [],
+             "body": [],
+             "logic": "AND",
+             "code": "-1"
+          }
+       }
     }
-    }
-]
+ }
