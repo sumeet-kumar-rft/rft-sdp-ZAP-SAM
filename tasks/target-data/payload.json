@@ -1,0 +1,19 @@
+[
+    {
+      "name": "zap",
+      "context": "ZAP BodgeIt Scan",
+      "target": {
+        "name": "demo",
+        "location": "http://demo.testfire.net/",
+        "attributes": 
+        {
+            "type": "2",
+            "form": {
+               "loginurl": "http://demo.testfire.net/doLogin",
+               "loginbody": "uid={%username%}&passw=admin&btnSubmit=Login",
+               "loginpageurl": "http://demo.testfire.net/doLogin"
+            }
+        }
+    }
+    }
+]
