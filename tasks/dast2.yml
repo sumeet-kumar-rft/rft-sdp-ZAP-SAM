@@ -34,6 +34,7 @@
                 zap-cli ajax-spider http://demo.testfire.net
                 zap-cli -v active-scan --scanners all --recursive http://demo.testfire.net
                 zap-cli alerts
+                echo $?
                 zap-cli shutdown
 
                 #cd /tmp
