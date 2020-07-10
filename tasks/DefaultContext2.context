@@ -4,7 +4,6 @@
         <name>Default Context</name>
         <desc/>
         <inscope>true</inscope>
-        <incregexes>http://demo.testfire.net/login.jsp.*</incregexes>
         <incregexes>http://demo.testfire.net.*</incregexes>
         <tech>
             <include>Db</include>
