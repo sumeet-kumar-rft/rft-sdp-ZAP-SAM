@@ -58,6 +58,9 @@
                 <loginpageurl>http://demo.testfire.net/login.jsp</loginpageurl>
             </form>
         </authentication>
+        <users>
+            <user>97;false;YWRtaW4=;2;YWRtaW4=~YWRtaW4=~</user>
+        </users>
         <forceduser>-1</forceduser>
         <session>
             <type>0</type>
