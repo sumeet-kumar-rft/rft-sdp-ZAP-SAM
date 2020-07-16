@@ -4,7 +4,6 @@
         <name>zero.webappsecurity.com</name>
         <desc/>
         <inscope>true</inscope>
-        <incregexes>https://zero.webappsecurity.com.*</incregexes>
         <incregexes>http://zero.webappsecurity.com.*</incregexes>
         <incregexes>http://zero.webappsecurity.com/signin.html</incregexes>
         <tech>
