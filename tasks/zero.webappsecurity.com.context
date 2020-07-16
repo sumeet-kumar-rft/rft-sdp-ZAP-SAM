@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <configuration>
     <context>
-        <name>zero.webappsecurity.com</name>
+        <name>webapp</name>
         <desc/>
         <inscope>true</inscope>
         <incregexes>http://zero.webappsecurity.com.*</incregexes>
-        <incregexes>http://zero.webappsecurity.com/signin.html</incregexes>
         <tech>
             <include>Db</include>
             <include>Db.CouchDB</include>
@@ -52,10 +51,10 @@
             <config>{"kvps":"&amp;","kvs":"=","struct":[]}</config>
         </postparser>
         <authentication>
-            <type>2</type>
+            <type>5</type>
             <form>
                 <loginurl>http://zero.webappsecurity.com/signin.html</loginurl>
-                <loginbody>user_login=username&amp;user_password={%username%}&amp;submit=Sign+in&amp;user_token=98a0cf34-773a-43dd-a654-29c220e142c5</loginbody>
+                <loginbody>user_login=username&amp;user_password=password&amp;submit=Sign+in&amp;user_token=98a0cf34-773a-43dd-a654-29c220e142c5</loginbody>
                 <loginpageurl>http://zero.webappsecurity.com/signin.html</loginpageurl>
             </form>
         </authentication>
