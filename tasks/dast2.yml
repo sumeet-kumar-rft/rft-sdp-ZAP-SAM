@@ -31,7 +31,7 @@
                 zap-cli context import ${PWD}/pipeline-git/tasks/zero.webappsecurity.com.context
                 zap-cli open-url http://zero.webappsecurity.com
                 zap-cli spider -c zero.webappsecurity.com --user-name username http://zero.webappsecurity.com
-                zap-cli ajax-spider --context-name zero.webappsecurity.com --user-name username http://zero.webappsecurity.com
+                #zap-cli ajax-spider --context-name zero.webappsecurity.com --user-name username http://zero.webappsecurity.com
                 zap-cli -v active-scan --scanners all --recursive -c zero.webappsecurity.com --user-name username http://zero.webappsecurity.com
                 zap-cli alerts
                 #echo $?
