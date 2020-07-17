@@ -32,7 +32,7 @@
                 zap-cli open-url http://zero.webappsecurity.com
                 zap-cli spider -c zero.webappsecurity.com -u username http://zero.webappsecurity.com
                 #zap-cli ajax-spider -c zero.webappsecurity.com -u username http://zero.webappsecurity.com
-                zap-cli -v active-scan --scanners all --recursive -c zero.webappsecurity.com -u username http://zero.webappsecurity.com
+                zap-cli -v active-scan --recursive -c zero.webappsecurity.com -u username http://zero.webappsecurity.com
                 zap-cli alerts
                 #echo $?
                 zap-cli shutdown
