@@ -56,7 +56,7 @@
             <loggedout>&lt;a id="logout_link" href="/logout.html"&gt;Logout&lt;/a&gt;</loggedout>
             <form>
                 <loginurl>http://zero.webappsecurity.com/signin.html</loginurl>
-                <loginbody>user_login={%username%}&amp;user_password={%password%}&amp;submit=Sign+in&amp;user_token=4409c025-f0ac-408e-a090-8f5494cb088e</loginbody>
+                <loginbody>user_login={%username%}&amp;user_password={%password%}&amp;submit=Sign+in&amp;user_token=be94d073-6c2f-40fb-ab2b-a62180e32add</loginbody>
                 <loginpageurl>http://zero.webappsecurity.com/signin.html</loginpageurl>
             </form>
         </authentication>
