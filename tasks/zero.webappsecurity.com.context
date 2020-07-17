@@ -5,6 +5,7 @@
         <desc/>
         <inscope>true</inscope>
         <incregexes>http://zero.webappsecurity.com/signin.html.*</incregexes>
+        <incregexes>http://zero.webappsecurity.com.*</incregexes>
         <tech>
             <include>Db</include>
             <include>Db.CouchDB</include>
