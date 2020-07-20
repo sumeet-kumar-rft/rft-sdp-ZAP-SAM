@@ -16,7 +16,7 @@
             args:
               - "-c"
               - |
-                set -euxo pipefail
+                set -uxo pipefail
                 #ls -al
                 #cd ${PWD}/pipeline-git/tasks/
                 #ls -al pipeline-git/tasks/
@@ -34,7 +34,7 @@
                 #zap-cli ajax-spider --context-name zero.webappsecurity.com --user-name username http://zero.webappsecurity.com
                 zap-cli -v active-scan --scanners all --recursive -c zero.webappsecurity.com --user-name username http://zero.webappsecurity.com
                 zap-cli alerts
-                #echo $?
+                echo $?
                 zap-cli shutdown
 
                 #cd /tmp
