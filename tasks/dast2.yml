@@ -29,10 +29,10 @@
                 #cd ${PWD}/pipeline-git/tasks/target-data/
                 #zap-cli context export --name DefaultContext2 --file-path ${PWD}/DefaultContext2.context
                 zap-cli context import ${PWD}/pipeline-git/tasks/zero.webappsecurity.com.context
-                zap-cli open-url http://zero.webappsecurity.com
-                zap-cli spider -c zero.webappsecurity.com --user-name username http://zero.webappsecurity.com
-                #zap-cli ajax-spider --context-name zero.webappsecurity.com --user-name username http://zero.webappsecurity.com
-                zap-cli -v active-scan --scanners all --recursive -c zero.webappsecurity.com --user-name username http://zero.webappsecurity.com
+                zap-cli open-url $TARGET_URL
+                zap-cli spider -c zero.webappsecurity.com --user-name username $TARGET_URL
+                #zap-cli ajax-spider --context-name zero.webappsecurity.com --user-name username $TARGET_URL
+                zap-cli -v active-scan --scanners all --recursive -c zero.webappsecurity.com --user-name username $TARGET_URL
                 zap-cli alerts
                 echo $?
                 zap-cli shutdown
