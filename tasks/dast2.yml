@@ -28,7 +28,7 @@
                 #cp DefaultContext2.context /${PWD}/pipeline-git/tasks/
                 #cd ${PWD}/pipeline-git/tasks/target-data/
                 #zap-cli context export --name DefaultContext2 --file-path ${PWD}/DefaultContext2.context
-                zap-cli context import $context-path
+                zap-cli context import $path
                 zap-cli open-url $TARGET_URL
                 zap-cli spider -c zero.webappsecurity.com --user-name username $TARGET_URL
                 #zap-cli ajax-spider --context-name zero.webappsecurity.com --user-name username $TARGET_URL
