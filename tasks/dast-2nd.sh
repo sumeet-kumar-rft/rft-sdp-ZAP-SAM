@@ -5,17 +5,18 @@ if [ "$DISABLED" = true ]; then
 fi
 echo "Performing DAST scanning"
 echo "Targets:"
-cat ./pipeline-git/tasks/target-data/target.txt
+cat  target.txt
 mkdir -p /zap/wrk
 #set -o monitor
 #trap 'exit(0)' CHLD
-for host in $(cat ./pipeline-git/tasks/target-data/target.txt)
+for host in $(cat target.txt)
 do
   cd /tmp
   # workaround to fix hanging Zap processes that prevents the container from exiting - https://github.com/concourse/concourse/issues/763
   echo "SCANNING $host"
-  zap-baseline.py -t $host -g gen.conf -r "report.html" -J "report.json" 
+  zap-baseline.py -t $host -g gen.conf -r "report.html" -J "report.json"
   # workaround to fix hanging Zap processes that prevents the container from exiting - https://github.com/concourse/concourse/issues/763
-  echo "==DAST SCANNING COMPLETE=="
+  echo "DAST SCANNING COMPLETE"
+  sleep 5
 done
 #kill `pgrep Xvfb`

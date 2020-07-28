@@ -11,6 +11,7 @@ outputs:
   - name: dast-data
   - name: /zap/wrk
 run:
+  user: root
   path: sh
   args:
   - pipeline-git/tasks/dast-2nd.sh
