@@ -7,7 +7,7 @@ fi
 echo "Performing DAST scanning"
 echo "Targets:"
 cat  $BASELINE_TARGETS
-mkdir -p /zap/wrkS
+mkdir -p /zap/wrk
 #set -o monitor
 #trap 'exit(0)' CHLD
 for host in $(cat $BASELINE_TARGETS)
