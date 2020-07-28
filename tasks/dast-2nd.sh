@@ -3,13 +3,14 @@ if [ "$DISABLED" = true ]; then
     echo "This stage has been disabled"
     exit
 fi
+
 echo "Performing DAST scanning"
 echo "Targets:"
-cat  target.txt
-mkdir -p /zap/wrk
+cat  $BASELINE_TARGETS
+mkdir -p /zap/wrkS
 #set -o monitor
 #trap 'exit(0)' CHLD
-for host in $(cat target.txt)
+for host in $(cat $BASELINE_TARGETS)
 do
   cd /tmp
   # workaround to fix hanging Zap processes that prevents the container from exiting - https://github.com/concourse/concourse/issues/763

@@ -18,3 +18,4 @@
       file: pipeline-git/tasks/dast.yml
       params:
         TARGET_URL: http://zero.webappsecurity.com
+        BASELINE_TARGETS: ./pipeline-git/tasks/target-data/target.txt
