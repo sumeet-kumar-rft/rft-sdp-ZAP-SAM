@@ -61,7 +61,7 @@
             </form>
         </authentication>
         <users>
-            <user>186;true;dXNlcm5hbWU=;2;dXNlcm5hbWU=~cGFzc3dvcmQ=~</user>
+            <user>username;true;dXNlcm5hbWU=;2;dXNlcm5hbWU=~cGFzc3dvcmQ=~</user>
         </users>
         <forceduser>186</forceduser>
         <session>
