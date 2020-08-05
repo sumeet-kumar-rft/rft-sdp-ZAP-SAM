@@ -4,7 +4,6 @@
         <name>zero.webappsecurity.com</name>
         <desc/>
         <inscope>true</inscope>
-        <incregexes>http://zero.webappsecurity.com/signin.html.*</incregexes>
         <incregexes>http://zero.webappsecurity.com.*</incregexes>
         <tech>
             <include>Db</include>
@@ -61,7 +60,7 @@
             </form>
         </authentication>
         <users>
-            <user>username;true;dXNlcm5hbWU=;2;dXNlcm5hbWU=~cGFzc3dvcmQ=~</user>
+            <user>186;true;dXNlcm5hbWU=;2;dXNlcm5hbWU=~cGFzc3dvcmQ=~</user>
         </users>
         <forceduser>186</forceduser>
         <session>
