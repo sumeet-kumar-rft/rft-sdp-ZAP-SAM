@@ -8,4 +8,6 @@ So, basically we are having dependecny on these three files present in repositor
 2. dast2.yml This yml file basically enlisting all the necessary shell commands required to run the ZAP active scan.
 3. .Context file This is an XML file that is containing the instruction for inscope sub-url's, login url, user credentials to carry out an authenticated scan.
 
-Below is the end result summary that we obtain after an actiev scan.
+Below is the end result summary that we obtain after an active scan.
+
+
